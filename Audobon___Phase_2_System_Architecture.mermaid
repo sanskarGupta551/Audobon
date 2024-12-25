@@ -1,0 +1,50 @@
+flowchart TD
+    subgraph Client[Electron Desktop App]
+        UI[User Interface]
+        Local[Local Storage]
+        Cache[Cache Manager]
+        TaskMgr[Task Manager]
+        StyleEng[Style Engine]
+        AssetMgr[Asset Manager]
+        VCS[Version Control]
+        ElectronBE[Electron Backend]
+    end
+
+    subgraph GCP[Google Cloud Platform]
+        subgraph CoreServices[Core Services]
+            MG[Model Garden]
+            AV[AutoML Vision]
+            CS[Cloud Storage]
+            BQ[BigQuery]
+            FS[Feature Store]
+            IAM[IAM & Security]
+        end
+        
+        subgraph ModelMgmt[Model Management]
+            CompReg[Component Registry]
+            Train[Enhanced Training]
+            StyleComp[Style Components]
+        end
+    end
+
+    UI --> ElectronBE
+    ElectronBE --> Local
+    ElectronBE --> Cache
+    ElectronBE --> TaskMgr
+    ElectronBE --> StyleEng
+    ElectronBE --> AssetMgr
+    ElectronBE --> VCS
+    
+    StyleEng <--> StyleComp
+    AssetMgr <--> CS
+    VCS --> CS
+    Cache <--> CS
+    TaskMgr <--> CompReg
+    
+    StyleComp <--> AV
+    StyleComp --> FS
+    CompReg --> MG
+    Train --> CompReg
+    
+    IAM -.- CoreServices
+    IAM -.- ModelMgmt

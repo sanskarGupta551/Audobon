@@ -1,0 +1,105 @@
+flowchart TD
+    subgraph Client[Electron Desktop App]
+        UI[User Interface]
+        Local[Local Storage]
+        Cache[Advanced Cache Manager]
+        TaskMgr[Task Manager]
+        StyleEng[Style Engine]
+        FlowEng[Flow Engine]
+        AssetMgr[Professional Asset Manager]
+        VCS[Professional Version Control]
+        Monitor[Performance Monitor]
+        Template[Template System]
+        Automate[Automation Engine]
+        ErrorHandler[Error Handler]
+        Analytics[Analytics Engine]
+        Backup[Backup System]
+        ElectronBE[Electron Backend]
+    end
+
+    subgraph GCP[Google Cloud Platform]
+        subgraph CoreServices[Core Services]
+            MG[Model Garden]
+            AV[AutoML Vision]
+            CS[Cloud Storage]
+            BQ[BigQuery]
+            FS[Feature Store]
+            IAM[IAM & Security]
+            KMS[Key Management]
+        end
+        
+        subgraph MLPipelines[ML Pipelines]
+            KF[Kubeflow Pipelines]
+            VP[Vertex AI Pipelines]
+            Inf[Inference Service]
+            Auto[Auto ML Ops]
+        end
+
+        subgraph ModelMgmt[Model Management]
+            CompReg[Component Registry]
+            Train[Production Training]
+            StyleComp[Style Components]
+            FlowComp[Flow Components]
+            AutoComp[Automation Components]
+            DR[Disaster Recovery]
+        end
+
+        subgraph Monitor[Enterprise Monitoring]
+            Log[Cloud Logging]
+            Trace[Cloud Trace]
+            Error[Error Reporting]
+            Alert[Alert Manager]
+            Dashboard[Dashboards]
+        end
+
+        subgraph Security[Security Services]
+            WAF[Cloud Armor]
+            DLP[DLP API]
+            Audit[Cloud Audit Logs]
+        end
+    end
+
+    UI --> ElectronBE
+    ElectronBE --> Local
+    ElectronBE --> Cache
+    ElectronBE --> TaskMgr
+    ElectronBE --> StyleEng
+    ElectronBE --> FlowEng
+    ElectronBE --> AssetMgr
+    ElectronBE --> VCS
+    ElectronBE --> Monitor
+    ElectronBE --> Template
+    ElectronBE --> Automate
+    ElectronBE --> ErrorHandler
+    ElectronBE --> Analytics
+    ElectronBE --> Backup
+    
+    StyleEng <--> StyleComp
+    FlowEng <--> FlowComp
+    Automate <--> AutoComp
+    AssetMgr <--> CS
+    VCS --> CS
+    Cache <--> CS
+    TaskMgr <--> CompReg
+    Template --> CS
+    Backup --> CS
+    
+    ErrorHandler --> Error
+    Analytics --> Log
+    
+    StyleComp <--> AV
+    FlowComp --> VP
+    CompReg --> MG
+    Train --> CompReg
+    
+    Monitor --> Log
+    Alert --> Dashboard
+    
+    Security --> CoreServices
+    Security --> MLPipelines
+    
+    IAM -.- CoreServices
+    IAM -.- MLPipelines
+    IAM -.- ModelMgmt
+    IAM -.- Monitor
+    IAM -.- Security

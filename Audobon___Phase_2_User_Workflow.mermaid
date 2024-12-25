@@ -1,0 +1,36 @@
+flowchart TD
+    Start([Start]) --> ProjectType{Project Type}
+    ProjectType -->|New| StyleSetup[Setup Style]
+    ProjectType -->|Load| LoadProject[Load Project]
+    
+    StyleSetup --> StyleSource{Style Source}
+    StyleSource -->|Preset| SelectStyle[Select Style]
+    StyleSource -->|Custom| CreateStyle[Create Style]
+    
+    CreateStyle --> RefImage{Use Reference?}
+    RefImage -->|Yes| UploadRef[Upload Reference]
+    RefImage -->|No| CharSetup[Setup Characters]
+    UploadRef --> ProcessStyle[Process Style]
+    ProcessStyle --> CharSetup
+    
+    SelectStyle --> CharSetup
+    LoadProject --> CheckStyle[Check Style]
+    CheckStyle --> CharSetup
+    
+    CharSetup --> InputText[Enter Panel Description]
+    InputText --> Generate[Generate Panel]
+    Generate --> Review{Review Result}
+    
+    Review -->|Style OK| SaveAsset[Save to Asset Library]
+    Review -->|Adjust Style| TweakStyle[Adjust Style]
+    TweakStyle --> Generate
+    
+    SaveAsset --> VersionTrack[Track Version]
+    VersionTrack --> MorePanels{More Panels?}
+    
+    MorePanels -->|Yes| InputText
+    MorePanels -->|No| Arrange[Arrange & Optimize]
+    
+    Arrange --> SaveProject[Save Project]
+    SaveProject --> Export[Export Comic]
+    Export --> End([End])
