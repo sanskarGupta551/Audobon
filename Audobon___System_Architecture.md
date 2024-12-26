@@ -3,282 +3,211 @@
 ## System Overview
 
 ### Architecture Principles
-1. **Local-First Processing**
-   - Prioritize local computation
-   - Minimize cloud dependencies
-   - Optimize resource usage
-   - Maintain responsive UI
+1. **Component-Based Processing**
+   - Strategic component extraction
+   - Efficient model assembly
+   - Optimized fine-tuning
+   - Resource management
 
-2. **Efficient Model Integration**
-   - Component-based assembly
-   - Minimal training requirements
-   - Optimized inference
-   - Smart caching
+2. **Local Processing Priority**
+   - Efficient local computation
+   - Smart caching system
+   - Resource optimization
+   - Responsive interface
 
 3. **Data Management**
-   - Robust version control
-   - Efficient asset management
-   - Metadata organization
-   - Backup strategies
+   - Asset organization
+   - Version control
+   - Backup strategy
+   - Metadata handling
 
 ## Core Components
+
+### Model Integration Layer
+
+#### Component Registry
+- **Source Management**
+  - Open-source model tracking
+  - Component cataloging
+  - Version management
+  - Compatibility validation
+
+- **Assembly System**
+  - Component integration
+  - Performance validation
+  - Resource optimization
+  - System monitoring
+
+#### Training Manager
+- **Fine-tuning Pipeline**
+  - Data preparation
+  - Resource allocation
+  - Progress tracking
+  - Result validation
+
+- **Resource Control**
+  - Compute optimization
+  - Memory management
+  - Performance monitoring
+  - Cost control
 
 ### Desktop Application Layer
 
 #### Electron Framework
 - **Main Process**
   - System initialization
-  - Window management
-  - File system operations
-  - IPC coordination
   - Resource management
+  - File operations
+  - Process coordination
 
 - **Renderer Process**
   - UI rendering
-  - User interaction handling
-  - Local state management
-  - Real-time preview
+  - User interaction
+  - Preview system
   - Asset visualization
 
 #### Local Processing Engine
-- **Task Scheduler**
+- **Task Management**
   - Resource allocation
-  - Priority management
   - Queue optimization
+  - Priority handling
   - Performance monitoring
 
-- **Cache Manager**
-  - Asset caching
+- **Cache System**
   - Model caching
+  - Asset caching
   - Result caching
   - Cache invalidation
 
 ### Asset Management System
 
 #### Asset Library
-- **Organization System**
-  - Hierarchical categories
-  - Dynamic tagging
+- **Organization**
+  - Category management
   - Metadata indexing
   - Relationship tracking
+  - Search functionality
 
-- **Search Engine**
-  - Full-text search
-  - Metadata queries
-  - Asset relationships
-  - Usage statistics
-
-#### Version Control System
-- **History Manager**
+- **Version Control**
   - Change tracking
-  - Branch management
-  - Merge handling
-  - Conflict resolution
-
-- **Backup System**
-  - Incremental backups
+  - History management
   - Recovery points
-  - Data integrity
-  - Synchronization
-
-### ML Integration Layer
-
-#### Model Management
-- **Component Registry**
-  - Model components
-  - Version tracking
-  - Compatibility checking
-  - Dependency management
-
-- **Training Manager**
-  - Fine-tuning orchestration
-  - Data preprocessing
-  - Progress monitoring
-  - Result validation
-
-#### Inference Engine
-- **Request Handler**
-  - Input validation
-  - Resource checking
-  - Priority assignment
-  - Error handling
-
-- **Results Manager**
-  - Output processing
-  - Quality validation
-  - Result caching
-  - Delivery coordination
+  - Backup system
 
 ### Cloud Integration
 
-#### GCP Services Integration
+#### GCP Services
 - **Model Garden**
   - Component access
   - Model retrieval
-  - Version management
-  - Update handling
+  - Version control
+  - Update management
 
 - **Vertex AI**
-  - Training orchestration
-  - Inference scaling
+  - Fine-tuning orchestration
   - Resource optimization
   - Performance monitoring
-
-#### Storage Management
-- **Cloud Storage**
-  - Model storage
-  - Backup management
-  - Asset synchronization
-  - Version archival
-
-- **BigQuery**
-  - Metadata storage
-  - Usage analytics
-  - Performance metrics
-  - Resource tracking
+  - System analytics
 
 ## System Interactions
 
-### Data Flow Patterns
+### Model Component Flow
 
-#### Local Operations
-- **Asset Processing**
-  1. Input validation
-  2. Resource allocation
-  3. Local processing
-  4. Cache management
-  5. Result delivery
+#### Component Integration
+- **Extraction Process**
+  1. Source model identification
+  2. Component validation
+  3. Compatibility check
+  4. Integration testing
 
-- **Version Control**
-  1. Change detection
-  2. Diff generation
-  3. History update
-  4. Backup trigger
-  5. Sync coordination
+- **Assembly Pipeline**
+  1. Component preparation
+  2. Integration process
+  3. Performance validation
+  4. Resource optimization
 
-#### Cloud Operations
-- **Model Updates**
-  1. Component check
-  2. Download scheduling
-  3. Validation
-  4. Integration
-  5. Cache update
-
-- **Training Operations**
+#### Fine-tuning Process
+- **Data Management**
   1. Data preparation
-  2. Resource allocation
-  3. Training execution
-  4. Result validation
-  5. Model integration
+  2. Synthetic generation
+  3. Validation setup
+  4. Quality assurance
+
+- **Training Control**
+  1. Resource allocation
+  2. Progress monitoring
+  3. Performance validation
+  4. Result verification
 
 ### Resource Management
 
 #### Local Resources
-- **Memory Management**
+- **Memory Control**
   - Dynamic allocation
   - Cache optimization
   - Resource pooling
-  - Cleanup strategies
+  - Usage monitoring
 
 - **Storage Management**
   - Space allocation
-  - Cleanup policies
-  - Optimization rules
-  - Backup coordination
+  - Asset organization
+  - Version control
+  - Cleanup protocols
 
 #### Cloud Resources
 - **Compute Optimization**
   - Resource scheduling
-  - Load balancing
-  - Cost optimization
+  - Load distribution
+  - Cost management
   - Performance tuning
 
-- **Storage Optimization**
+- **Storage Strategy**
   - Data lifecycle
   - Access patterns
-  - Retention policies
-  - Archive strategies
-
-## Security Architecture
-
-### Local Security
-- **File System**
-  - Access control
-  - Encryption
-  - Integrity checking
-  - Secure deletion
-
-- **Process Security**
-  - Isolation
-  - Permission management
-  - Resource constraints
-  - Error containment
-
-### Cloud Security
-- **Authentication**
-  - Identity management
-  - Access control
-  - Token handling
-  - Session management
-
-- **Data Protection**
-  - Transmission security
-  - Storage encryption
-  - Key management
-  - Audit logging
+  - Backup management
+  - Archive policies
 
 ## Performance Optimization
 
-### Local Optimization
-- **Process Management**
-  - Thread allocation
-  - Priority handling
-  - Resource balancing
+### Processing Optimization
+- **Local Processing**
+  - Thread management
+  - Resource allocation
+  - Cache utilization
   - Task scheduling
 
-- **Cache Strategy**
-  - Multi-level caching
-  - Predictive loading
-  - Cache invalidation
-  - Space management
-
-### Cloud Optimization
-- **Resource Allocation**
-  - Dynamic scaling
+- **Cloud Processing**
+  - Component deployment
+  - Resource scaling
+  - Load balancing
   - Cost optimization
-  - Performance tuning
-  - Load distribution
 
-- **Data Transfer**
-  - Batch processing
-  - Compression
-  - Delta updates
-  - Bandwidth optimization
+### Error Handling
 
-## Error Handling
-
-### Recovery Strategies
+#### Recovery Systems
 - **Local Recovery**
   - State preservation
-  - Graceful degradation
-  - Auto-save
-  - Rollback procedures
+  - Error detection
+  - Automatic recovery
+  - Data protection
 
 - **Cloud Recovery**
-  - Request retry
-  - Fallback options
+  - Component fallback
   - State synchronization
   - Error logging
+  - System restoration
 
-### Monitoring System
-- **Performance Monitoring**
-  - Resource usage
-  - Response times
-  - Error rates
+## Monitoring System
+
+### Performance Tracking
+- **Resource Monitoring**
+  - Usage metrics
+  - Performance data
+  - Error tracking
   - System health
 
-- **Usage Analytics**
-  - Feature usage
-  - Performance metrics
-  - Error patterns
-  - Resource utilization
+- **Quality Assurance**
+  - Component validation
+  - Integration testing
+  - Performance verification
+  - User experience monitoring
