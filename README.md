@@ -1,2 +1,2 @@
 # Audobon
-Story and Comic Generation
+Comic Generation
