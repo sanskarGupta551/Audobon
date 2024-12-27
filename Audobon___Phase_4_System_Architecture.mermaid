@@ -2,12 +2,12 @@ flowchart TD
     subgraph Client[Electron Desktop App]
         UI[User Interface]
         Local[Local Storage]
-        Cache[Cache Manager]
+        Cache[Enhanced Cache Manager]
         TaskMgr[Task Manager]
         StyleEng[Style Engine]
         FlowEng[Flow Engine]
         AssetMgr[Advanced Asset Manager]
-        VCS[Enhanced Version Control]
+        VCS[Version Control]
         Monitor[Performance Monitor]
         Template[Template System]
         Automate[Automation Engine]
@@ -17,30 +17,18 @@ flowchart TD
     subgraph GCP[Google Cloud Platform]
         subgraph CoreServices[Core Services]
             MG[Model Garden]
-            AV[AutoML Vision]
             CS[Cloud Storage]
-            BQ[BigQuery]
-            FS[Feature Store]
             IAM[IAM & Security]
         end
         
-        subgraph MLPipelines[ML Pipelines]
-            KF[Kubeflow Pipelines]
-            VP[Vertex AI Pipelines]
-            Inf[Inference Service]
-        end
-
         subgraph ModelMgmt[Model Management]
             CompReg[Component Registry]
-            Train[Advanced Training]
             StyleComp[Style Components]
             FlowComp[Flow Components]
-            AutoComp[Automation Components]
         end
 
-        subgraph Monitor[Advanced Monitoring]
+        subgraph Monitor[Basic Monitoring]
             Log[Cloud Logging]
-            Trace[Cloud Trace]
             Error[Error Reporting]
         end
     end
@@ -59,21 +47,14 @@ flowchart TD
     
     StyleEng <--> StyleComp
     FlowEng <--> FlowComp
-    Automate <--> AutoComp
     AssetMgr <--> CS
     VCS --> CS
     Cache <--> CS
     TaskMgr <--> CompReg
     Template --> CS
     
-    StyleComp <--> AV
-    FlowComp --> VP
-    CompReg --> MG
-    Train --> CompReg
-    
     Monitor --> Log
     
     IAM -.- CoreServices
-    IAM -.- MLPipelines
     IAM -.- ModelMgmt
     IAM -.- Monitor
