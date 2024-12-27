@@ -1,213 +1,158 @@
 # Audobon System Architecture
 
-## System Overview
+## Core Architecture
 
-### Architecture Principles
-1. **Component-Based Processing**
-   - Strategic component extraction
-   - Efficient model assembly
-   - Optimized fine-tuning
-   - Resource management
+### Local Processing Engine
+1. **Component Assembly**
+   - Model component registry
+   - Assembly pipeline
+   - Validation system
+   - Performance monitoring
 
-2. **Local Processing Priority**
-   - Efficient local computation
-   - Smart caching system
-   - Resource optimization
-   - Responsive interface
+2. **Generation System**
+   - Text processing
+   - Image generation
+   - Style application
+   - Quality validation
 
-3. **Data Management**
-   - Asset organization
+### Asset Management
+1. **Local Storage**
+   - File organization
    - Version control
-   - Backup strategy
-   - Metadata handling
+   - Metadata management
+   - Search indexing
 
-## Core Components
+2. **Cache System**
+   - Component caching
+   - Result caching
+   - Resource management
+   - Cleanup routines
 
-### Model Integration Layer
+## Application Layer
 
-#### Component Registry
-- **Source Management**
-  - Open-source model tracking
-  - Component cataloging
-  - Version management
-  - Compatibility validation
+### Electron Framework
+1. **Main Process**
+   - System initialization
+   - Resource management
+   - File operations
+   - Process coordination
 
-- **Assembly System**
-  - Component integration
-  - Performance validation
-  - Resource optimization
-  - System monitoring
+2. **Renderer Process**
+   - UI rendering
+   - User interaction
+   - Preview system
+   - Real-time feedback
 
-#### Training Manager
-- **Fine-tuning Pipeline**
-  - Data preparation
-  - Resource allocation
-  - Progress tracking
-  - Result validation
+### Local Processing
+1. **Task Management**
+   - Queue system
+   - Priority handling
+   - Resource allocation
+   - Performance tracking
 
-- **Resource Control**
-  - Compute optimization
-  - Memory management
-  - Performance monitoring
-  - Cost control
+2. **Error Handling**
+   - Error detection
+   - Recovery procedures
+   - State management
+   - User notification
 
-### Desktop Application Layer
+## Cloud Integration
 
-#### Electron Framework
-- **Main Process**
-  - System initialization
-  - Resource management
-  - File operations
-  - Process coordination
+### Essential Services
+1. **Model Garden Access**
+   - Component retrieval
+   - Version tracking
+   - Basic updates
+   - Status monitoring
 
-- **Renderer Process**
-  - UI rendering
-  - User interaction
-  - Preview system
-  - Asset visualization
+2. **Backup Storage**
+   - Asset backup
+   - Version archive
+   - Recovery system
+   - Sync management
 
-#### Local Processing Engine
-- **Task Management**
-  - Resource allocation
-  - Queue optimization
-  - Priority handling
-  - Performance monitoring
+## Processing Pipeline
 
-- **Cache System**
-  - Model caching
-  - Asset caching
-  - Result caching
-  - Cache invalidation
+### Component Management
+1. **Extraction Pipeline**
+   - Source validation
+   - Component extraction
+   - Quality checking
+   - Version control
 
-### Asset Management System
+2. **Assembly System**
+   - Component integration
+   - Performance validation
+   - Resource optimization
+   - Error handling
 
-#### Asset Library
-- **Organization**
-  - Category management
-  - Metadata indexing
-  - Relationship tracking
-  - Search functionality
+### Generation Pipeline
+1. **Core Generation**
+   - Input processing
+   - Component assembly
+   - Style application
+   - Output validation
 
-- **Version Control**
-  - Change tracking
-  - History management
-  - Recovery points
-  - Backup system
+2. **Quality Control**
+   - Result validation
+   - Style checking
+   - Performance monitoring
+   - Resource tracking
 
-### Cloud Integration
+## Resource Management
 
-#### GCP Services
-- **Model Garden**
-  - Component access
-  - Model retrieval
-  - Version control
-  - Update management
+### Local Resources
+1. **Memory Management**
+   - Dynamic allocation
+   - Cache optimization
+   - Resource pooling
+   - Cleanup system
 
-- **Vertex AI**
-  - Fine-tuning orchestration
-  - Resource optimization
-  - Performance monitoring
-  - System analytics
+2. **Storage Management**
+   - Space allocation
+   - Asset organization
+   - Version tracking
+   - Backup handling
 
-## System Interactions
+### Processing Resources
+1. **CPU Management**
+   - Task scheduling
+   - Load balancing
+   - Priority handling
+   - Performance optimization
 
-### Model Component Flow
+2. **GPU Utilization**
+   - Generation tasks
+   - Resource allocation
+   - Queue management
+   - Performance monitoring
 
-#### Component Integration
-- **Extraction Process**
-  1. Source model identification
-  2. Component validation
-  3. Compatibility check
-  4. Integration testing
-
-- **Assembly Pipeline**
-  1. Component preparation
-  2. Integration process
-  3. Performance validation
-  4. Resource optimization
-
-#### Fine-tuning Process
-- **Data Management**
-  1. Data preparation
-  2. Synthetic generation
-  3. Validation setup
-  4. Quality assurance
-
-- **Training Control**
-  1. Resource allocation
-  2. Progress monitoring
-  3. Performance validation
-  4. Result verification
-
-### Resource Management
-
-#### Local Resources
-- **Memory Control**
-  - Dynamic allocation
-  - Cache optimization
-  - Resource pooling
-  - Usage monitoring
-
-- **Storage Management**
-  - Space allocation
-  - Asset organization
-  - Version control
-  - Cleanup protocols
-
-#### Cloud Resources
-- **Compute Optimization**
-  - Resource scheduling
-  - Load distribution
-  - Cost management
-  - Performance tuning
-
-- **Storage Strategy**
-  - Data lifecycle
-  - Access patterns
-  - Backup management
-  - Archive policies
-
-## Performance Optimization
-
-### Processing Optimization
-- **Local Processing**
-  - Thread management
-  - Resource allocation
-  - Cache utilization
-  - Task scheduling
-
-- **Cloud Processing**
-  - Component deployment
-  - Resource scaling
-  - Load balancing
-  - Cost optimization
-
-### Error Handling
-
-#### Recovery Systems
-- **Local Recovery**
-  - State preservation
-  - Error detection
-  - Automatic recovery
-  - Data protection
-
-- **Cloud Recovery**
-  - Component fallback
-  - State synchronization
-  - Error logging
-  - System restoration
-
-## Monitoring System
+## System Monitoring
 
 ### Performance Tracking
-- **Resource Monitoring**
-  - Usage metrics
-  - Performance data
-  - Error tracking
-  - System health
+1. **Resource Monitoring**
+   - Usage tracking
+   - Performance metrics
+   - Error logging
+   - System health
 
-- **Quality Assurance**
-  - Component validation
-  - Integration testing
-  - Performance verification
-  - User experience monitoring
+2. **Quality Assurance**
+   - Output validation
+   - Style consistency
+   - Resource efficiency
+   - Error detection
+
+## Recovery System
+
+### Error Recovery
+1. **State Management**
+   - Auto-save system
+   - State preservation
+   - Recovery procedures
+   - Data protection
+
+2. **Error Handling**
+   - Error detection
+   - Recovery steps
+   - User notification
+   - State restoration

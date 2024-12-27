@@ -1,88 +1,131 @@
 # Audobon Testing Strategy
 
-## Core Testing Focus
+## Core Testing Principles
 
-### Model Testing
-1. **Component Validation**
-   - Source model compatibility
-   - Component extraction quality
+### Focus Areas
+1. **Essential Validation**
+   - Component testing
+   - Generation quality
+   - Resource efficiency
+   - User experience
+
+2. **Local Testing**
+   - Quick validation
+   - Direct feedback
+   - Simple automation
+   - Resource monitoring
+
+## Testing Categories
+
+### Component Testing
+1. **Model Components**
+   - Extraction quality
    - Assembly validation
-   - Basic fine-tuning tests
+   - Processing efficiency
+   - Output verification
 
-2. **Generation Testing**
-   - Output quality
-   - Style consistency
-   - Performance checks
+2. **Integration**
+   - Component interaction
    - Resource usage
-
-### App Testing
-1. **UI Testing**
-   - Interface responsiveness
-   - Workflow functionality
-   - Asset management
+   - Performance impact
    - Error handling
 
-2. **Feature Testing**
-   - Core functionality
-   - Asset operations
-   - Version control
-   - Basic automation
+### User Interface
+1. **Basic Testing**
+   - Interface response
+   - User workflows
+   - Visual consistency
+   - Error feedback
 
-## Test Types
-
-### Manual Testing
-1. **Visual Inspection**
-   - Generated output quality
-   - UI consistency
-   - Style accuracy
-   - Visual errors
-
-2. **Workflow Testing**
-   - User journeys
-   - Feature interactions
-   - Error recovery
-   - Performance feel
-
-### Basic Automation
-1. **Essential Checks**
-   - Component loading
-   - Basic generation
-   - File operations
-   - Critical paths
-
-2. **Performance Monitoring**
+2. **Performance**
+   - Response time
    - Resource usage
-   - Generation speed
-   - Memory usage
-   - Storage efficiency
+   - Memory management
+   - Loading efficiency
 
-## Quality Assurance
+## Generation Testing
 
-### Output Quality
-1. **Comic Generation**
+### Quality Validation
+1. **Output Testing**
    - Image quality
-   - Style matching
-   - Panel consistency
-   - Overall coherence
+   - Style consistency
+   - Character accuracy
+   - Scene coherence
 
-2. **Asset Management**
-   - File integrity
+2. **Performance**
+   - Generation speed
+   - Resource usage
+   - Memory efficiency
+   - Cache effectiveness
+
+### Process Validation
+1. **Workflow Testing**
+   - User steps
+   - Error handling
+   - State management
+   - Recovery process
+
+2. **Resource Testing**
+   - CPU usage
+   - Memory allocation
+   - Storage efficiency
+   - Cache performance
+
+## Asset Management
+
+### Storage Testing
+1. **File Operations**
+   - Save/load functions
+   - Version control
+   - Search capability
+   - Backup process
+
+2. **Data Integrity**
+   - File consistency
    - Version accuracy
-   - Metadata consistency
-   - Search functionality
+   - Metadata validity
+   - Backup reliability
 
-### Error Handling
-1. **Basic Recovery**
-   - Auto-save functionality
-   - Error messages
-   - State recovery
-   - Data preservation
+### Resource Usage
+1. **Storage Efficiency**
+   - Space usage
+   - File organization
+   - Cleanup process
+   - Cache management
 
-2. **Prevention**
+2. **Process Efficiency**
+   - Operation speed
+   - Resource allocation
+   - Memory usage
+   - Performance impact
+
+## Error Handling
+
+### Basic Validation
+1. **Error Detection**
    - Input validation
-   - Resource checks
-   - Format verification
-   - Limit monitoring
+   - Process monitoring
+   - Output verification
+   - Resource checking
+
+2. **Recovery Testing**
+   - Error recovery
+   - State preservation
+   - Data protection
+   - User notification
+
+### Quality Assurance
+1. **Prevention**
+   - Input validation
+   - Resource monitoring
+   - Process validation
+   - State verification
+
+2. **Resolution**
+   - Error handling
+   - Recovery steps
+   - Data preservation
+   - User feedback
 
 ## Documentation
 
@@ -90,11 +133,11 @@
 1. **Basic Tracking**
    - Test results
    - Error logs
-   - Performance notes
-   - Improvement ideas
+   - Performance data
+   - User feedback
 
-2. **Version Testing**
-   - Feature verification
-   - Performance changes
-   - Bug fixes
-   - Compatibility
+2. **Updates**
+   - Test cases
+   - Quality metrics
+   - Performance data
+   - Issue tracking
