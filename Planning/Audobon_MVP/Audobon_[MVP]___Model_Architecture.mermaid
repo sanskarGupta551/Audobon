@@ -1,0 +1,65 @@
+flowchart TB
+    subgraph ModelOrchestrator[Model Orchestrator]
+        direction TB
+        RC[Resource Coordinator]
+        CM[Cache Manager]
+        PM[Pipeline Manager]
+    end
+
+    subgraph CharGen[Character Generator Model]
+        direction TB
+        UNet[U-Net Components]
+        CLIP1[CLIP Integration]
+        CN[ControlNet Modules]
+        SAM[SAM Components]
+        
+        UNet --> CLIP1
+        CLIP1 --> CN
+        CN --> SAM
+    end
+
+    subgraph PanelGen[Panel Generation Model]
+        direction TB
+        LG[Layout-GAN Components]
+        VT[Vision Transformer]
+        DETR[DETR Components]
+        
+        LG --> VT
+        VT --> DETR
+    end
+
+    subgraph StyleTransfer[Style Transfer Model]
+        direction TB
+        AdaIN[AdaIN Network]
+        SG[StyleGAN Modules]
+        CLIP2[CLIP Components]
+        
+        AdaIN --> SG
+        SG --> CLIP2
+    end
+
+    subgraph BackgroundGen[Background Generator]
+        direction TB
+        SG2[Scene Generator]
+        DE[Depth Estimator]
+        EC[Environment Composer]
+        
+        SG2 --> DE
+        DE --> EC
+    end
+
+    ModelOrchestrator --> CharGen
+    ModelOrchestrator --> PanelGen
+    ModelOrchestrator --> StyleTransfer
+    ModelOrchestrator --> BackgroundGen
+    
+    subgraph ProcessingLayer[Processing Layer]
+        direction TB
+        LP[Local Processing]
+        CP[Cloud Processing]
+    end
+    
+    CharGen --> ProcessingLayer
+    PanelGen --> ProcessingLayer
+    StyleTransfer --> ProcessingLayer
+    BackgroundGen --> ProcessingLayer

@@ -1,0 +1,63 @@
+flowchart TD
+    subgraph Local Desktop Application
+        UI[User Interface]
+        LCP[Local Command Processor]
+        
+        subgraph Local Models
+            style Local Models fill:#f0f8ff,stroke:#333,stroke-width:2px
+            
+            CG[Character Generator Model]
+            PG[Panel Generation Model]
+            ST[Style Transfer Model]
+            BG[Background Generator]
+            TX[Text & Typography Model]
+            PE[Panel Effects Model]
+            
+            CG --> ModelHub
+            PG --> ModelHub
+            ST --> ModelHub
+            BG --> ModelHub
+            TX --> ModelHub
+            PE --> ModelHub
+            
+            ModelHub[Model Orchestrator]
+        end
+        
+        Cache[(Local Cache)]
+        FSM[File System Manager]
+        
+        UI --> LCP
+        LCP --> ModelHub
+        ModelHub --> Cache
+        Cache --> FSM
+    end
+    
+    subgraph Cloud Processing System
+        style Cloud Processing System fill:#f0f7ff,stroke:#333,stroke-width:2px
+        
+        Queue[Task Queue]
+        Scheduler[Task Scheduler]
+        
+        subgraph Cloud Models
+            HRG[High-Res Generator]
+            BPM[Batch Processing Model]
+            AGM[Advanced Generation Model]
+        end
+        
+        CloudStorage[(Cloud Storage)]
+        
+        Queue --> Scheduler
+        Scheduler --> HRG & BPM & AGM
+        HRG & BPM & AGM --> CloudStorage
+    end
+    
+    subgraph Mobile Companion App
+        MUI[Mobile UI]
+        TT[Task Tracker]
+        NT[Notification Handler]
+    end
+    
+    LCP -.-> Queue
+    CloudStorage -.-> NT
+    NT --> MUI
+    TT --> MUI

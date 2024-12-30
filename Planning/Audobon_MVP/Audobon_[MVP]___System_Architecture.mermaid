@@ -1,0 +1,72 @@
+flowchart TB
+    subgraph DesktopApp[Desktop Application]
+        direction TB
+        UI[User Interface Layer]
+        BL[Business Logic Layer]
+        DL[Data Layer]
+        
+        subgraph MainProc[Main Process]
+            direction TB
+            FSM[File System Manager]
+            IPC[IPC Bridge]
+            Native[Native APIs]
+        end
+        
+        subgraph Renderer[Renderer Process]
+            direction TB
+            React[React Components]
+            Redux[Redux Store]
+            Effects[Effect System]
+        end
+        
+        subgraph LocalProc[Local Processing]
+            direction TB
+            MO[Model Orchestrator]
+            Cache[Cache Manager]
+            Models[AI Models]
+        end
+        
+        UI --> React
+        React --> Redux
+        Redux --> Effects
+        Effects --> IPC
+        IPC --> FSM
+        IPC --> Native
+        BL --> MO
+        MO --> Models
+        MO --> Cache
+        DL --> FSM
+    end
+    
+    subgraph CloudSys[Cloud System]
+        direction TB
+        CR[Cloud Run]
+        CS[Cloud Storage]
+        PS[Pub/Sub]
+        
+        subgraph CloudProc[Processing]
+            direction TB
+            TS[Task Scheduler]
+            QM[Queue Manager]
+            NS[Notification System]
+        end
+        
+        TS --> CR
+        CR --> CS
+        QM --> PS
+        PS --> NS
+    end
+    
+    subgraph MobileApp[Mobile Companion]
+        direction TB
+        MA[Mobile App]
+        NM[Notification Module]
+        CM[Communication Module]
+        
+        MA --> NM
+        MA --> CM
+    end
+    
+    DesktopApp --> CloudSys
+    CloudSys --> MobileApp
+    MobileApp --> DesktopApp

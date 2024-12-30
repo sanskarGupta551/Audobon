@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+    <!-- Background -->
+    <rect width="1200" height="800" fill="#f8f9fa"/>
+    
+    <!-- Title Section -->
+    <text x="600" y="60" font-family="Arial" font-size="36" fill="#1a73e8" text-anchor="middle" font-weight="bold">Audobon [MVP]</text>
+    <text x="600" y="95" font-family="Arial" font-size="18" fill="#5f6368" text-anchor="middle">Comic Generation Platform</text>
+
+    <!-- Desktop Application Section -->
+    <g transform="translate(100, 150)">
+        <!-- Desktop App Container -->
+        <rect x="0" y="0" width="600" height="500" rx="15" fill="#ffffff" stroke="#dadce0" stroke-width="2"/>
+        
+        <!-- Local Processing Title -->
+        <text x="300" y="40" font-family="Arial" font-size="24" fill="#202124" text-anchor="middle">Local Processing Core</text>
+        
+        <!-- Model Components -->
+        <g transform="translate(50, 80)">
+            <!-- Character Generator -->
+            <rect x="0" y="0" width="240" height="120" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="2"/>
+            <text x="120" y="45" font-family="Arial" font-size="16" fill="#1a73e8" text-anchor="middle">Character Generator</text>
+            <text x="120" y="70" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">U-Net + CLIP + ControlNet</text>
+            <text x="120" y="90" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Local Processing</text>
+        </g>
+
+        <!-- Panel Generator -->
+        <g transform="translate(310, 80)">
+            <rect x="0" y="0" width="240" height="120" rx="10" fill="#fce8e6" stroke="#ea4335" stroke-width="2"/>
+            <text x="120" y="45" font-family="Arial" font-size="16" fill="#ea4335" text-anchor="middle">Panel Generator</text>
+            <text x="120" y="70" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Layout-GAN + DINO</text>
+            <text x="120" y="90" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Optimized Performance</text>
+        </g>
+
+        <!-- Style Transfer -->
+        <g transform="translate(50, 220)">
+            <rect x="0" y="0" width="240" height="120" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+            <text x="120" y="45" font-family="Arial" font-size="16" fill="#34a853" text-anchor="middle">Style Transfer</text>
+            <text x="120" y="70" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">AdaIN + StyleGAN</text>
+            <text x="120" y="90" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Real-time Processing</text>
+        </g>
+
+        <!-- Background Generator -->
+        <g transform="translate(310, 220)">
+            <rect x="0" y="0" width="240" height="120" rx="10" fill="#fef7e0" stroke="#fbbc04" stroke-width="2"/>
+            <text x="120" y="45" font-family="Arial" font-size="16" fill="#fbbc04" text-anchor="middle">Background Generator</text>
+            <text x="120" y="70" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Scene Composition</text>
+            <text x="120" y="90" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Environment Design</text>
+        </g>
+
+        <!-- Orchestrator -->
+        <g transform="translate(50, 360)">
+            <rect x="0" y="0" width="500" height="80" rx="10" fill="#f1f3f4" stroke="#5f6368" stroke-width="2"/>
+            <text x="250" y="35" font-family="Arial" font-size="16" fill="#5f6368" text-anchor="middle">Model Orchestrator</text>
+            <text x="250" y="55" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Resource Management | Cache Control | Pipeline Coordination</text>
+        </g>
+    </g>
+
+    <!-- Cloud Section -->
+    <g transform="translate(750, 150)">
+        <!-- Cloud Container -->
+        <rect x="0" y="0" width="350" height="500" rx="15" fill="#ffffff" stroke="#dadce0" stroke-width="2"/>
+        
+        <!-- Cloud Title -->
+        <text x="175" y="40" font-family="Arial" font-size="24" fill="#202124" text-anchor="middle">Cloud Processing</text>
+
+        <!-- Cloud Run -->
+        <g transform="translate(50, 80)">
+            <rect x="0" y="0" width="250" height="100" rx="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="2"/>
+            <text x="125" y="40" font-family="Arial" font-size="16" fill="#1a73e8" text-anchor="middle">Cloud Run</text>
+            <text x="125" y="65" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Resource-Intensive Processing</text>
+        </g>
+
+        <!-- Cloud Storage -->
+        <g transform="translate(50, 200)">
+            <rect x="0" y="0" width="250" height="100" rx="10" fill="#fce8e6" stroke="#ea4335" stroke-width="2"/>
+            <text x="125" y="40" font-family="Arial" font-size="16" fill="#ea4335" text-anchor="middle">Cloud Storage</text>
+            <text x="125" y="65" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Asset Management</text>
+        </g>
+
+        <!-- Task Management -->
+        <g transform="translate(50, 320)">
+            <rect x="0" y="0" width="250" height="100" rx="10" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+            <text x="125" y="40" font-family="Arial" font-size="16" fill="#34a853" text-anchor="middle">Task Management</text>
+            <text x="125" y="65" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Queue System | Background Processing</text>
+        </g>
+    </g>
+
+    <!-- Mobile App -->
+    <g transform="translate(500, 680)">
+        <!-- Mobile Container -->
+        <rect x="0" y="0" width="200" height="100" rx="10" fill="#ffffff" stroke="#dadce0" stroke-width="2"/>
+        <text x="100" y="45" font-family="Arial" font-size="16" fill="#1a73e8" text-anchor="middle">Mobile Companion</text>
+        <text x="100" y="70" font-family="Arial" font-size="12" fill="#5f6368" text-anchor="middle">Task Tracking | Notifications</text>
+    </g>
+
+    <!-- Connecting Lines -->
+    <g stroke="#dadce0" stroke-width="2">
+        <!-- Local to Cloud -->
+        <path d="M700,400 L750,400" fill="none"/>
+        <!-- Cloud to Mobile -->
+        <path d="M925,650 L700,730" fill="none"/>
+    </g>
+</svg>
