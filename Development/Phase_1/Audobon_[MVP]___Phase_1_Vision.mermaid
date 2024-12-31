@@ -1,0 +1,87 @@
+flowchart TB
+    classDef mission fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef milestone fill:#fff3e0,stroke:#ff6f00,stroke-width:2px
+    classDef component fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef deliverable fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+
+    Phase1[Phase 1: Foundation Development]
+    
+    subgraph Mission1[Mission 1: Development Environment]
+        direction TB
+        DevTools[Development Tools Setup]
+        ProjectStruct[Project Structure]
+        GitFlow[Git Workflow]
+        
+        DevTools --> IDE[VS Code + Extensions]
+        DevTools --> Docker[Docker Setup]
+        ProjectStruct --> DirStruct[Directory Structure]
+        ProjectStruct --> Config[Configuration Files]
+        GitFlow --> Hooks[Git Hooks]
+        GitFlow --> Guidelines[Workflow Guidelines]
+    end
+    
+    subgraph Mission2[Mission 2: Core Application]
+        direction TB
+        Electron[Electron Setup]
+        React[React Integration]
+        UI[UI Foundation]
+        
+        Electron --> MainProc[Main Process]
+        Electron --> IPC[IPC Bridge]
+        React --> TypeScript[TypeScript Config]
+        React --> Redux[Redux Toolkit]
+        UI --> Tailwind[Tailwind + shadcn]
+        UI --> Theme[Theme System]
+    end
+    
+    subgraph Mission3[Mission 3: File System]
+        direction TB
+        FileOps[File Operations]
+        Storage[Storage Management]
+        Cache[Cache System]
+        
+        FileOps --> FSUtils[File System Utils]
+        FileOps --> AssetMgmt[Asset Management]
+        Storage --> LocalStore[Local Storage]
+        Storage --> Backup[Backup System]
+        Cache --> CacheStrat[Cache Strategy]
+        Cache --> CacheMon[Cache Monitoring]
+    end
+    
+    subgraph Mission4[Mission 4: Testing]
+        direction TB
+        UnitTest[Unit Testing]
+        IntegTest[Integration Testing]
+        E2E[E2E Testing]
+        
+        UnitTest --> Jest[Jest Setup]
+        UnitTest --> RTL[React Testing Library]
+        IntegTest --> TestScen[Test Scenarios]
+        E2E --> Playwright[Playwright Setup]
+    end
+    
+    subgraph Mission5[Mission 5: Quality]
+        direction TB
+        CodeQual[Code Quality]
+        Docs[Documentation]
+        Metrics[Quality Metrics]
+        
+        CodeQual --> Lint[ESLint + Prettier]
+        CodeQual --> Sonar[SonarQube]
+        Docs --> API[API Docs]
+        Docs --> CompDocs[Component Docs]
+        Metrics --> Performance[Performance Metrics]
+        Metrics --> Coverage[Coverage Reports]
+    end
+    
+    Phase1 --> Mission1
+    Mission1 --> Mission2
+    Mission2 --> Mission3
+    Mission3 --> Mission4
+    Mission4 --> Mission5
+    
+    %% Apply classes
+    class Mission1,Mission2,Mission3,Mission4,Mission5 mission
+    class DevTools,Electron,FileOps,UnitTest,CodeQual milestone
+    class IDE,MainProc,FSUtils,Jest,Lint component
+    class Guidelines,Theme,Backup,Coverage,CompDocs deliverable
